@@ -17,15 +17,19 @@ player is in the whitelist:
 
 player is not in the whitelist:
 
-```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_allowed"}```
+```json
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_allowed"}
+```
 
 player is in the blacklist:
 
-```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "banned"}```
+```json
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "banned"}```
 
 player is not in the blacklist:
 
-```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_banned"}```
+```json
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_banned"}```
 
 ## Files
 
