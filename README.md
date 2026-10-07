@@ -4,6 +4,7 @@ A simple proxy-side whitelist / blacklist plugin for [velocity](https://github.c
 
 Tested with velocity `4.2.0`, java 25
 
+Should work with velocity `3.3.0`, java 17 as no major changes from the original version were made.
 
 ## Connection Logging
 
