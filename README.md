@@ -11,25 +11,27 @@ This fork adds explicit whitelisted/blacklisted connection logging in a somewhat
 
 player is in the whitelist:
 
-```json
+```text
 [velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "allowed"}
 ```
 
 player is not in the whitelist:
 
-```json
+```text
 [velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_allowed"}
 ```
 
 player is in the blacklist:
 
-```json
-[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "banned"}```
+```text
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "banned"}
+```
 
 player is not in the blacklist:
 
-```json
-[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_banned"}```
+```text
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_banned"}
+```
 
 ## Files
 
