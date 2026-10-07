@@ -1,8 +1,31 @@
 # VelocityWhitelist
 
-A simple whitelist / blacklist plugin for [velocity](https://github.com/PaperMC/Velocity)
+A simple proxy-side whitelist / blacklist plugin for [velocity](https://github.com/PaperMC/Velocity)
 
-Tested with velocity `3.3.0`, java 17
+Tested with velocity `4.2.0`, java 25
+
+
+## Connection Logging
+
+This fork adds explicit whitelisted/blacklisted connection logging in a somewhat JSON format; 
+
+player is in the whitelist:
+
+```json
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "allowed"}
+```
+
+player is not in the whitelist:
+
+```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_allowed"}```
+
+player is in the blacklist:
+
+```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "banned"}```
+
+player is not in the blacklist:
+
+```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_banned"}```
 
 ## Files
 

@@ -302,8 +302,29 @@ public class WhitelistManager
 				Component message = MiniMessage.miniMessage().deserialize(this.config.getWhitelistKickMessage());
 				event.setResult(ResultedEvent.ComponentResult.denied(message));
 
-				this.logger.info("Kicking player {} ({}) since it's not in the whitelist", profile.getName(), profile.getId());
+				// this.logger.info("Kicking player {} ({}) since it's not in the whitelist", profile.getName(), profile.getId());
+
+				this.logger.info(
+				    "{\"name\": \"{}\", \"uuid\": \"{}\", \"status\": \"not_allowed\"}",
+					profile.getName(),
+					profile.getId()
+				);
 			}
+			else 
+			{
+				// Component message = MiniMessage.miniMessage().deserialize(this.config.getWhitelistKickMessage());
+				// event.setResult(ResultedEvent.ComponentResult.denied(message));
+
+				// this.logger.info("Player {} ({}) in whitelist", profile.getName(), profile.getId());
+
+				this.logger.info(
+				    "{\"name\": \"{}\", \"uuid\": \"{}\", \"status\": \"allowed\"}",
+					profile.getName(),
+					profile.getId()
+				);
+
+			}
+
 		}
 		else if (this.blacklist.isActivated())
 		{
@@ -312,7 +333,22 @@ public class WhitelistManager
 				Component message = MiniMessage.miniMessage().deserialize(this.config.getBlacklistKickMessage());
 				event.setResult(ResultedEvent.ComponentResult.denied(message));
 
-				this.logger.info("Kicking player {} ({}) since it's in the blacklist", profile.getName(), profile.getId());
+				// this.logger.info("Kicking player {} ({}) since it's in the blacklist", profile.getName(), profile.getId());
+
+				this.logger.info(
+				    "{\"name\": \"{}\", \"uuid\": \"{}\", \"status\": \"banned\"}",
+					profile.getName(),
+					profile.getId()
+				);
+				
+			}
+			else
+			{
+				this.logger.info(
+				    "{\"name\": \"{}\", \"uuid\": \"{}\", \"status\": \"not_banned\"}",
+					profile.getName(),
+					profile.getId()
+				);
 			}
 		}
 	}
