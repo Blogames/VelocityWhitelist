@@ -4,6 +4,7 @@ A simple proxy-side whitelist / blacklist plugin for [velocity](https://github.c
 
 Tested with velocity `4.2.0`, java 25
 
+Should work with velocity `3.3.0`, java 17 as no major changes from the original version were made.
 
 ## Connection Logging
 
@@ -11,21 +12,27 @@ This fork adds explicit whitelisted/blacklisted connection logging in a somewhat
 
 player is in the whitelist:
 
-```json
+```text
 [velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "allowed"}
 ```
 
 player is not in the whitelist:
 
-```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_allowed"}```
+```text
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_allowed"}
+```
 
 player is in the blacklist:
 
-```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "banned"}```
+```text
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "banned"}
+```
 
 player is not in the blacklist:
 
-```[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_banned"}```
+```text
+[velocitywhitelist]: {"name": "Steve", "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "status": "not_banned"}
+```
 
 ## Files
 
